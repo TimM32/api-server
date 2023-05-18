@@ -9,7 +9,7 @@ const { foodModel } = require('../models');
 router.get('/food', async (request, response, next) => {
   let foods = await foodModel.findAll();
 
-  response.status(200).send(customers);
+  response.status(200).send(foods);
 });
 
 router.get ('/food/:id', async (request, response, next) => {
