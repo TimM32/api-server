@@ -1,17 +1,17 @@
 # api-server
-# LAB - Class xx
+# LAB - Class 3
 
-## Project: Project Name Here
+## Project: API-Server
 
-### Author: Student/Group Name
+### Author: Tim Maupin
 
-### Problem Domain  
+### Problem Domain
 
 Concise Description of why this app exists
 
 ### Links and Resources
 
-- [GitHub Actions ci/cd](https://github.com/rkgallaway/server-deployment-practice-d51/actions) 
+- [GitHub Actions ci/cd](https://github.com/rkgallaway/server-deployment-practice-d51/actions)
 - [back-end server url](http://xyz.com) (when applicable)
 - [front-end application](http://xyz.com) (when applicable)
 

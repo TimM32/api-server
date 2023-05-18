@@ -7,7 +7,9 @@
   "scripts": {
     "start": "node index.js",
     "test": "jest --verbose --coverage",
-    "test-watch": "jest --watchAll --verbose --coverage"
+    "test-watch": "jest --watchAll --verbose --coverage",
+    "init:config": "sequelize init:config",
+    "db:create": "sequelize db:create"
   },
   "keywords": [],
   "author": "",
@@ -23,4 +25,5 @@
     "sequelize-cli": "^6.6.0",
     "sqlite3": "^5.1.6",
     "supertest": "^6.3.3"
+}
 }
