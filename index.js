@@ -4,7 +4,7 @@ require('dotenv').config();
 const { sequelizeDatabase } = require('./src/models');
 const { start } = require('./src/server');
 
-cosnt PORT = process.env.PORT || 5002;
+const PORT = process.env.PORT || 5002;
 
 sequelizeDatabase.sync()
 .then(() => {
