@@ -1,23 +1,27 @@
 'use stirct';
 
 const express = require('express');
-const cors = require('cors');
-const foodRouter = require('./routes/food');
 
-const app = express();
-app.use(cors());
-app.use(express.json());
+const router = express.Router();
+const { foodModel } = require('../models');
 
-app.use(foodRouter);
-app.get('/', (request, response, next) => {
-    response.status(200).send('Hello World!');
+
+router.get('/food', async (request, response, next) => {
+  let foods = await foodModel.findAll();
+
+  response.status(200).send(customers);
 });
 
-const start = (port) =. {
-    app.listen(port, ()=> console.log('running server on:', port));
-};
+router.get ('/food/:id', async (request, response, next) => {
+  let singleFood = await foodModel.findAll({where: {id: request.params.id}});
 
-module.exports = {
-    app,
-    start,
-};
+  response.status(200).send(singleFood);
+});
+
+router.post('/food', async(request, response, next) => {
+  let newFoodItem = await foodModel.create(request.body);
+
+  response.status(200).send(newFoodItem);
+});
+
+module.exports = router;
