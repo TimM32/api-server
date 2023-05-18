@@ -8,7 +8,7 @@ module.exports = (sequelizeDatabase, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    amount: {
+    quantity: {
       type: DataTypes.INTEGER,
       allowNull: true,
     },

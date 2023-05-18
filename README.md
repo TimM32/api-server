@@ -1,5 +1,4 @@
-# api-server
-# LAB - Class 3
+# LAB - api-server
 
 ## Project: API-Server
 
@@ -34,8 +33,7 @@ DATABASE_URL=postgres://localhost:5432/(your-datebase-name)
 
 #### Features / Routes
 
-- Feature One: Details of feature
-- GET : `/hello` - specific route to hit
+Food and ingredients routes to add, upate, post or delete items from given route types.
 
 #### Tests
 
