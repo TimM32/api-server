@@ -21,7 +21,9 @@ Concise Description of why this app exists
 
 #### `.env` requirements (where applicable)
 
-for now I have none and do not require one
+PORT=
+
+DATABASE_URL=postgres://localhost:5432/(your-datebase-name)
 
 
 #### How to initialize/run your application (where applicable)
@@ -43,4 +45,4 @@ for now I have none and do not require one
 
 #### UML
 
-Link to an image of the UML for your application and response to events
+![Lab 3 UML](./images/screen_shot_2023-05-17_at_8.19.32_pm_720.png)
