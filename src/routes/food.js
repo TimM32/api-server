@@ -4,8 +4,6 @@ const express = require('express');
 
 const router = express.Router();
 const { foodModel } = require('../models');
-const { request } = require('http');
-
 
 router.get('/food', async (request, response, next) => {
   let foods = await foodModel.findAll();
@@ -41,7 +39,6 @@ router.delete('/food/:id', async (request, response, next) => {
   } catch (e) {
     next(e);
   }
-
 
 });
 

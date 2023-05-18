@@ -5,7 +5,6 @@ const express = require('express');
 const router = express.Router();
 const { ingredientModel } = require('../models');
 
-
 router.get('/ingredient', async (request, response, next) => {
   let foods = await ingredientModel.findAll();
 
