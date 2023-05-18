@@ -1,0 +1,3 @@
+'sue strict';
+
+module.exports =
