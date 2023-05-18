@@ -1,9 +1,8 @@
 'use stict';
 
 const supertest = require('supertest');
-const { app } = require('../src/sever');
+const { app } = require('../src/server');
 const { sequelizeDatabase } = require('../src/models');
-const { test } = require('node:test');
 const request = supertest(app);
 
 beforeAll(async () => {
