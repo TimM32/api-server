@@ -10,6 +10,6 @@ const sequelizeDatabase = new Sequelize(DATABASE_URL);
 const foodModel = food(sequelizeDatabase, DataTypes);
 
 module.exports = {
-    sequelizeDatabase,
-    foodModel
+  sequelizeDatabase,
+  foodModel,
 };

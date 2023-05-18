@@ -13,6 +13,11 @@ module.exports = (sequelizeDatabase, DataTypes) => {
       values: ['onions', 'strawberries', 'potatoes', 'milk'],
       allowNull: true,
     },
+    origin: {
+      type: DataTypes.STRING,
+      values: ['italy', 'america', 'france', 'mexcio'],
+      allowNull: true,
+    },
   });
 };
 
