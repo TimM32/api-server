@@ -12,16 +12,36 @@ router.get('/ingredient', async (request, response, next) => {
   response.status(200).send(foods);
 });
 
-router.get ('/food/:id', async (request, response, next) => {
+router.get ('/ingredient/:id', async (request, response, next) => {
   let singleIngredient = await ingredientModel.findAll({where: {id: request.params.id}});
 
   response.status(200).send(singleIngredient);
 });
 
-router.post('/food', async(request, response, next) => {
+router.post('/ingredient', async(request, response, next) => {
   let newIngredientItem = await ingredientModel.create(request.body);
 
   response.status(200).send(newIngredientItem);
+});
+
+router.put('/ingredient/:id', async (request, response, next) => {
+  await ingredientModel.update(request.body, { where: { id: request.params.id } });
+
+  const updateIngredientItem = await ingredientModel.findByPk(request.params.id);
+  response.status(200).send(updateIngredientItem);
+
+});
+
+router.delete('/ingredient/:id', async (request, response, next) => {
+  try {
+    const deletedFood = await ingredientModel.findByPk(request.params.id);
+    await ingredientModel.destroy({ where: {id: request.params.id }});
+    response.staus(200).send(deletedFood);
+  } catch (e) {
+    next(e);
+  }
+
+
 });
 
 module.exports = router;

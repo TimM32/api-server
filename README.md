@@ -16,6 +16,9 @@ Concise Description of why this app exists
 
 ### Collaborators
 
+Worked with Eva Grace on the UML(Lab 3)
+
+
 ### Setup
 
 #### `.env` requirements (where applicable)
