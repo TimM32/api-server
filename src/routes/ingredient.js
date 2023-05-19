@@ -6,29 +6,44 @@ const router = express.Router();
 const { ingredientModel } = require('../models');
 
 router.get('/ingredient', async (request, response, next) => {
-  let foods = await ingredientModel.findAll();
+  try {
+    let foods = await ingredientModel.findAll();
 
-  response.status(200).send(foods);
+    response.status(200).send(foods);
+  } catch (e) {
+    next(e);
+  }
 });
 
 router.get ('/ingredient/:id', async (request, response, next) => {
-  let singleIngredient = await ingredientModel.findAll({where: {id: request.params.id}});
+  try {
+    let singleIngredient = await ingredientModel.findAll({where: {id: request.params.id}});
 
-  response.status(200).send(singleIngredient);
+    response.status(200).send(singleIngredient);
+  } catch (e) {
+    next (e);
+  }
 });
 
 router.post('/ingredient', async(request, response, next) => {
-  let newIngredientItem = await ingredientModel.create(request.body);
+  try {
+    let newIngredientItem = await ingredientModel.create(request.body);
 
-  response.status(200).send(newIngredientItem);
+    response.status(200).send(newIngredientItem);
+  } catch (e) {
+    next(e);
+  }
 });
 
 router.put('/ingredient/:id', async (request, response, next) => {
-  await ingredientModel.update(request.body, { where: { id: request.params.id } });
+  try {
+    await ingredientModel.update(request.body, { where: { id: request.params.id } });
 
-  const updateIngredientItem = await ingredientModel.findByPk(request.params.id);
-  response.status(200).send(updateIngredientItem);
-
+    const updateIngredientItem = await ingredientModel.findByPk(request.params.id);
+    response.status(200).send(updateIngredientItem);
+  } catch (e) {
+    next(e);
+  }
 });
 
 router.delete('/ingredient/:id', async (request, response, next) => {

@@ -18,10 +18,11 @@ afterAll( async () => {
 
 describe('Ingredient router', () => {
   test('handles create route', async () => {
-    const response = await request.post('/ingredent').send({product: 'test', quantity: 2});
-
+    const response = await request.post('/ingredient').send({name: 'test', quantity: 2});
+    console.log('Response!', response.body);
     expect(response.status).toEqual(200);
-    expect(response.status).toEqual('test');
+    expect(response.body.name).toEqual('test');
+    expect(response.body.quantity).toEqual(2);
   });
 
 });

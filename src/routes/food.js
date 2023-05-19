@@ -12,7 +12,7 @@ router.get('/food', async (request, response, next) => {
 });
 
 router.get('/food/:id', async (request, response, next) => {
-  let singleFood = await foodModel.findAll({ where: { id: request.params.id } });
+  let singleFood = await foodModel.findAll({where: { id: request.params.id }});
 
   response.status(200).send(singleFood);
 });
@@ -24,7 +24,7 @@ router.post('/food', async (request, response, next) => {
 });
 
 router.put('/food/:id', async (request, response, next) => {
-  await foodModel.update(request.body, { where: { id: request.params.id } });
+  await foodModel.update(request.body, {where: { id: request.params.id }});
 
   const updateFoodItem = await foodModel.findByPk(request.params.id);
   response.status(200).send(updateFoodItem);

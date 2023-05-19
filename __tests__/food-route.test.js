@@ -17,13 +17,13 @@ describe('Food routes', () => {
   test('create a food item', async ()=> {
     let response = await request.post('/food').send({
       name: 'HotDog',
-      ingredient: 'Meat',
+      ingredients: 'Meat',
       origin: 'America',
     });
-
+    console.log('we got a respone', response.body);
     expect(response.status).toEqual(200);
     expect(response.body.name).toEqual('HotDog');
-    expect(response.body.ingredient).toEqual('Meat');
+    expect(response.body.ingredients).toEqual('Meat');
   });
 
   test('get all food items', async() => {
@@ -31,7 +31,7 @@ describe('Food routes', () => {
 
     expect(response.status).toEqual(200);
     expect(response.body[0].name).toEqual('HotDog');
-    expect(response.body[0].age).toEqual('Meat');
+    expect(response.body[0].ingredients).toEqual('Meat');
   });
 
 });
