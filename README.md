@@ -1,27 +1,31 @@
-# api-server
-# LAB - Class xx
+# LAB - api-server
 
-## Project: Project Name Here
+## Project: API-Server
 
-### Author: Student/Group Name
+### Author: Tim Maupin
 
-### Problem Domain  
+### Problem Domain
 
 Concise Description of why this app exists
 
 ### Links and Resources
 
-- [GitHub Actions ci/cd](https://github.com/rkgallaway/server-deployment-practice-d51/actions) 
+- [GitHub Actions ci/cd](https://github.com/rkgallaway/server-deployment-practice-d51/actions)
 - [back-end server url](http://xyz.com) (when applicable)
 - [front-end application](http://xyz.com) (when applicable)
 
 ### Collaborators
 
+Worked with Eva Grace on the UML(Lab 3)
+
+
 ### Setup
 
 #### `.env` requirements (where applicable)
 
-for now I have none and do not require one
+PORT=
+
+DATABASE_URL=postgres://localhost:5432/(your-datebase-name)
 
 
 #### How to initialize/run your application (where applicable)
@@ -32,8 +36,7 @@ for now I have none and do not require one
 
 #### Features / Routes
 
-- Feature One: Details of feature
-- GET : `/hello` - specific route to hit
+Food and ingredients routes to add, upate, post or delete items from given route types.
 
 #### Tests
 
@@ -43,4 +46,4 @@ for now I have none and do not require one
 
 #### UML
 
-Link to an image of the UML for your application and response to events
+![Lab 3 UML](./images/screen_shot_2023-05-17_at_8.19.32_pm_720.png)
