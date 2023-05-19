@@ -35,7 +35,7 @@ router.delete('/food/:id', async (request, response, next) => {
   try {
     const deletedFood = await foodModel.findByPk(request.params.id);
     await foodModel.destroy({ where: {id: request.params.id }});
-    response.staus(200).send(deletedFood);
+    response.status(200).send(deletedFood);
   } catch (e) {
     next(e);
   }

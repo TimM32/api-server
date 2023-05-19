@@ -20,6 +20,7 @@ describe('Food routes', () => {
       ingredients: 'Meat',
       origin: 'America',
     });
+    
     console.log('we got a respone', response.body);
     expect(response.status).toEqual(200);
     expect(response.body.name).toEqual('HotDog');
